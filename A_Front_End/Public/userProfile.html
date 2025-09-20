@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/userProfile.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Venture Tour</h1>
+            <ul class="menu">
+                <li><a href="../Public/index.html">Home</a></li>
+                <li><a href="">Sign out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="userProfile">
+        <div class="showProfile">
+            <div class="profileHeader">
+            <div class="profileInfo">
+                <div class="icon">👤</div>
+                <div>
+                <div class="nameShow" id="nameShow">Vhan Parichart</div>
+                <div class="emailShow" id="emailShow">parichart@gmail.com</div>
+                </div>
+            </div>
+            <button id="btnEdit" class="btnEdit">Edit</button>
+            </div>
+        </div>
+
+        <!-- Personal Details มองไม่เห็นจนกว่าจะกด edit -->
+        <div class="showData">
+            <h3 class="title">Personal Details</h3>
+
+            <form id="profileForm">
+                <div class="field">
+                    <label class="label">Firstname</label>
+                    <input class="input" id="inputfirst" type="text" value="Vhan" disabled>
+                </div>
+                <div class="field">
+                    <label class="label">Lastname</label>
+                    <input class="input" id="inputlast" type="text" value="Parichart" disabled>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <input class="input" id="iputemail" type="email" value="parichart@gmail.com" disabled>
+                </div>
+                <div class="field">
+                    <label class="label">Telephone</label>
+                    <input class="input" id="inputtel" type="tel" value="0812345678" disabled>
+                </div>
+
+                <!-- ปุ่ม edit -->
+                <div class="editActions" id="editActions">
+                    <button type="button" id="btnCancel" class="btnCancel">Cancel</button>
+                    <button type="submit" class="btnSave">Save</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="userHistory">
+            <h3 class="title">Your History</h3>
+            <ul class="history">
+                <li class="historyInfo">
+                    <div class="trip">Seoul 4D3N</div>
+                    <div class="date">12 มิ.ย. 2024</div>
+                </li>
+                <li class="historyInfo">
+                    <div class="trip">Singapore 3D2N</div>
+                    <div class="date">20 ก.ค. 2023</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const btnEdit = document.getElementById('btnEdit');
+        const form = document.getElementById('profileForm');
+        const inputs = form.querySelectorAll('input');
+        const actions = document.getElementById('editActions');
+        const btnCancel = document.getElementById('btnCancel');
+
+        function setEditing(on){
+            inputs.forEach(el => el.disabled = !on);
+            actions.style.display = on ? 'flex' : 'none';
+            btnEdit.style.display = on ? 'none' : 'inline-flex';
+        }
+        setEditing(false);
+
+        btnEdit.addEventListener('click', () => setEditing(true));
+        btnCancel.addEventListener('click', () => {
+            form.reset();               
+            setEditing(false);
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const first = document.getElementById('inputfirst').value;
+            const last = document.getElementById('inputlast').value;
+            const email = document.getElementById('iputemail').value; 
+
+            document.getElementById('nameShow').textContent  = `${first} ${last}`;
+            document.getElementById('emailShow').textContent = email;
+            setEditing(false);
+        });
+    </script>
+
+
+</body>
+</html>
