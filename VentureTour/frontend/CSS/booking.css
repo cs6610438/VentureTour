@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.packageInfo {
+    display: flex;                  
+    gap: 20px;                      
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1120px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.leftCol {
+    flex: 1.2;                      
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.rightCol {
+    flex: 1.6;                      
+    min-width: 0;
+}
+
+.showPackage, 
+.summary, 
+.travelers {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px 18px;
+}
+
+.showPackage h2 {
+    margin-top: 0;
+}
+
+.peopleCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.quan {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quan button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.quan button:hover {
+    background: #eee;
+}
+
+.quan input {
+    width: 55px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.summary h2 {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.sumBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pricePer, .quanTra, .sumTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#loadMessage {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.travelerForm {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    background: #fafafa;
+}
+
+.travelerForm h3 {
+    margin: 0 0 10px;
+}
+
+.travelerForm label {
+    display: block;
+    margin: 6px 0 3px;
+    font-weight: 500;
+}
+
+.travelerForm input,
+.travelerForm select {
+    width: 100%;
+    height: 38px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.btngroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    background: #f5f5f5;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #e5e5e5;
+}
+
+.quan {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quan button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quan input[type="number"] {
+    width: 50px;
+    height: 32px;               
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.quan input::-webkit-inner-spin-button,
+.quan input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
