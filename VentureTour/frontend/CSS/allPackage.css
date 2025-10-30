@@ -1,13 +1,21 @@
-                       .pagehead {
- max-width: 1120px;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.pagehead {
+    max-width: 1120px;
     margin: 0 auto;
     padding: 24px 20px 8px;
 }
+
 .pagetitle {
     margin: 0 0 6px;
     font-size: 36px;
     font-weight: 900;
 }
+
 .pagenote {
     margin: 0;
     color: #6b7280;
@@ -19,6 +27,7 @@
     margin: 24px auto 40px;
     padding: 0 20px;
 }
+
 .sectionname {
     margin: 0 0 14px;
     font-size: 22px;
@@ -26,6 +35,7 @@
     align-items: center;
     gap: 10px;
 }
+
 .sectiondetail {
     font-size: 14px;
     color: #6b7280;
@@ -38,7 +48,6 @@
     gap: 20px;
 }
 
-
 .packagebox {
     border: 1px solid #e8ecf3;
     border-radius: 14px;
@@ -48,15 +57,18 @@
     position: relative;
     transition: .2s;
 }
+
 .packagebox:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 24px rgba(17,23,36,.1);
 }
+
 .packageimg {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
+
 .packagebody {
     padding: 12px 14px 16px;
 }
@@ -87,6 +99,7 @@
     color: #cc1e1e;
     font-weight: 800;
 }
+
 .packageseat {
     color: #065f46;
     font-weight: 600;
@@ -97,6 +110,7 @@
     display: flex;
     justify-content: flex-end;
 }
+
 .packagebtn {
     display: inline-block;
     padding: 8px 12px;
@@ -105,6 +119,7 @@
     text-decoration: none;
     color: #2b3345;
 }
+
 .packagebtn:hover {
     background: #2b3345;
     color: #fff;
@@ -141,4 +156,22 @@
     overflow:hidden; 
     text-overflow:ellipsis; 
     white-space:nowrap; 
+}
+
+.packagegrid {
+    grid-template-columns: 1fr;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .packagegrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .packagegrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

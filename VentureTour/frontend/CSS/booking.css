@@ -1,5 +1,13 @@
 * {
     box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -7,30 +15,27 @@ body {
     background: #f5f5f5;
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .packageInfo {
-    display: flex;                  
-    gap: 20px;                      
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 1120px;
-    width: 90%;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    width: 100%;
+    max-width: 640px;
     margin: 20px auto;
     padding: 0 10px;
+    overflow-x: hidden;
 }
 
-.leftCol {
-    flex: 1.2;                      
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    min-width: 0;
+.leftCol, .rightCol {
+    width: 100%;
 }
 
-.rightCol {
-    flex: 1.6;                      
-    min-width: 0;
+.leftCol, .rightCol {
+    width: 100%;
 }
 
 .showPackage, 
@@ -40,6 +45,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px 18px;
+    margin-top: 20px;
 }
 
 .showPackage h2 {
@@ -51,6 +57,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .quan {
@@ -136,6 +144,7 @@ body {
 .btngroup {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 15px;
     gap: 10px;
 }
@@ -181,4 +190,59 @@ body {
 .quan input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.travelerForm > label {
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Taplet */
+@media (min-width: 768px) {
+    .packageInfo {
+        flex-direction: row;      
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 960px;
+        gap: 24px;
+    }
+
+    .leftCol {
+        flex: 1.2;
+    }
+
+    .rightCol {
+        flex: 1.6;
+    }
+
+    .btngroup {
+        justify-content: space-between;
+    }
+
+    .btn {
+        flex: 0 0 auto;             
+        min-width: 70px;
+        height: 46px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .packageInfo {
+        max-width: 1120px;
+        gap: 32px;
+    }
+
+    .btn {
+        flex: 0 0 auto;
+        min-width: 70px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .btngroup {
+        width: 100%;
+        justify-content: space-between;
+    }
 }

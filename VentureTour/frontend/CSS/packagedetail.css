@@ -22,7 +22,7 @@ body {
 
 .imgGal {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
     margin-bottom: 20px;
 }
@@ -175,3 +175,63 @@ body {
     background: #1f2937;
 }
 
+/* Tablet */
+@media (min-width: 768px) {
+    .pkDetail {
+        max-width: 960px;
+    }
+
+    .imgItem {
+        max-height: 520px;
+        border-radius: 14px;
+    }
+
+    .pkTitle {
+        font-size: 22px;
+    }
+
+    .planTitle {
+        font-size: 19px;
+    }
+
+    .actionBtns {
+        flex-direction: row;
+    }
+
+    .btnBack,.btnBooking {
+        flex: 1;
+        height: 48px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .pkDetail {
+        max-width: 1120px;
+    }
+
+    .imgItem {
+        max-height: 600px;
+    }
+
+    .pkTitle {
+        font-size: 24px;
+    }
+
+    .planTitle {
+        font-size: 20px;
+    }
+
+    .pkBox p {
+        font-size: 16px;
+    }
+
+    .planList {
+        font-size: 16px;
+    }
+
+    .actionBtns {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

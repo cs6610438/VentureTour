@@ -217,3 +217,85 @@ button {
 button:hover { 
     background:#e5e5e5; 
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+    .endSummary {
+        max-width: 900px;
+        margin: 30px auto;
+    }
+
+    .endSum {
+        padding: 22px;
+    }
+
+    .sumTrip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sumBase, .sumTotal, .sumRow {
+        font-size: 16px;
+    }
+
+    .applyBtn, .applyLoyaltyBtn {
+        height: 40px;
+        padding: 0 16px;
+        font-size: 15px;
+    }
+
+    .pointsInput,
+    .formInput {
+        height: 40px;
+    }
+
+    .bkLinks {
+        margin-top: 20px;
+    }
+
+    .Button, .Link {
+        min-width: 110px;
+        height: 42px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .endSummary {
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+    .endSum {
+        padding: 26px 28px;
+    }
+
+    .sumTrip {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 20px;
+    }
+
+    .sumBase, .sumTotal, .sumRow {
+        font-size: 17px;
+    }
+
+    .Note {
+        font-size: 15.5px;
+    }
+
+    .bkLinks {
+        margin-top: 24px;
+    }
+
+    .Button, .Link {
+        height: 46px;
+        font-size: 16px;
+        padding: 0 18px;
+    }
+
+    .applyBtn, .applyLoyaltyBtn {
+        height: 42px;
+        font-size: 15.5px;
+        padding: 0 18px;
+    }
+}

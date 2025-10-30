@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link rel="stylesheet" href="../../CSS/navbar.css">
     <link rel="stylesheet" href="../../CSS/userdashboard_css/userprofile.css">
 </head>
 <body>
-    <header> 
-    <nav> 
-        <h1 class="logo">Venture Tour</h1> 
-        <ul class="menu" id="navbar-menu"> 
-            <li><a href="../index.html">Home</a></li> 
-        </ul>
-    </nav> 
-   </header>
-
-    <div class="userProfile">
-        <div class="showProfile">
+    <main class="userProfile">
+        <header class="showProfile">
             <div class="profileHeader">
                 <div class="profileInfo">
                     <div class="icon">👤</div>
@@ -29,10 +19,10 @@
                 </div>
                 <button id="btnEdit" class="btnEdit">Edit</button>
             </div>
-        </div>
+        </header>
 
         <!-- Personal Details -->
-        <div class="showData">
+        <section class="showData">
             <h3 class="title">Personal Details</h3>
             <form id="profileForm">
                 <div class="field">
@@ -59,15 +49,20 @@
             <div style="margin-top: 10px;">
                 <button type="button" id="btnVerifyEmail" class="btnVerifyEmail">Verify Email</button>
             </div>
-        </div>
+        </section>
 
-        <div class="userHistory">
+        <section class="userHistory">
             <h3 class="title">Your History</h3>
             <ul class="history" id="historyList">
                 <!-- ประวัติจะโหลดเพิ่มทีหลัง ถ้าต้องการ -->
             </ul>
-        </div>
-    </div>
+        </section>
+
+        <section class="backHome">
+            <a href="../index.html" class="btnHome">Back</a>
+        </section>
+    </main>
+
     <script src="../../client-script/NavStatus.js"></script>
     <script src="../../client-script/clientdashboardJS/userprofile.js"></script>
 </body>
